@@ -1,3 +1,14 @@
+type RecursiveHTMLElement<T> = {
+    [K in keyof T]:
+    T[K] extends string
+    ? HTMLElement | HTMLTextAreaElement | null
+    : T[K] extends string[]
+    ? (HTMLElement | HTMLTextAreaElement | null)[]
+    : T[K] extends object
+    ? RecursiveHTMLElement<T[K]>
+    : never;
+}
+
 const dom = (function () {
     const byId = (id: string): HTMLElement | HTMLTextAreaElement | null => {
         return document.getElementById(id) as HTMLElement | HTMLTextAreaElement | null;
@@ -6,17 +17,6 @@ const dom = (function () {
     const byQueryAll = (query: string) => document.querySelectorAll(query)
     const byQ = (elem: HTMLElement | HTMLInputElement | HTMLButtonElement, query: string) => elem.querySelector(query)
     const byQAll = (elem: HTMLElement | HTMLInputElement | HTMLButtonElement, query: string) => elem.querySelectorAll(query)
-
-    type RecursiveHTMLElement<T> = {
-        [K in keyof T]:
-        T[K] extends string
-        ? HTMLElement | HTMLTextAreaElement | null
-        : T[K] extends string[]
-        ? (HTMLElement | HTMLTextAreaElement | null)[]
-        : T[K] extends object
-        ? RecursiveHTMLElement<T[K]>
-        : never;
-    }
 
     const getAllById = <T extends Record<string, any>>(obj: T): RecursiveHTMLElement<T> => {
         const results = {} as RecursiveHTMLElement<T>;
@@ -112,7 +112,7 @@ const dom = (function () {
         off2: 'var(--off_second_color)',
     } as const
 
-    type EventNamesT = 'click' | 'input' | 'did-finish-load' | 'console-message' | 'change'
+    type EventNamesT = 'click' | 'input' | 'did-finish-load' | 'console-message' | 'change' | 'mousedown' | 'mouseup'
     const add = (elem: HTMLElement | HTMLInputElement | HTMLButtonElement, name: EventNamesT, fn: EventListenerOrEventListenerObject) => elem.addEventListener(name, fn)
 
     const xmlns = 'http://www.w3.org/2000/svg'
