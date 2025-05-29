@@ -17,13 +17,16 @@
     },
     "files": [
         "src/console.ts",
+        "src/globalHelpers.ts",
         "src/storage.ts",
         "src/dom.ts",
         "src/core.ts",
+        "src/engine/inputs.ts",
         "src/engine/initData.ts",
         "src/engine/countingCore.ts",
         "src/engine/drawing.ts",
-        "src/engine/_index.ts",
+        "src/engine/analize.ts",
+        "src/engine/simulation.ts",
         "src/_index.ts",
     ],
     "exclude": [

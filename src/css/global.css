@@ -222,17 +222,6 @@
 
 @media screen and (prefers-color-scheme: dark) {
     :root {
-        --light_font: 'Montserrat-ExtraLight';
-        --light_italian_font: 'Montserrat-ExtraLightItalic';
-        --font: 'Montserrat-Regular';
-        --italian_font: 'Montserrat-RegularItalic';
-        --medium_font: 'Montserrat-Medium';
-        --medium_italian_font: 'Montserrat-MediumItalic';
-        --bold_font: 'Montserrat-Bold';
-        --bold_italian_font: 'Montserrat-BoldItalic';
-        --black_font: 'Montserrat-Black';
-        --black_italian_font: 'Montserrat-BlackItalic';
-
         --prime_color: #aaa;
         --second_color: #888;
         --background_color: #121212;
@@ -249,17 +238,6 @@
 
 @media screen and (prefers-color-scheme: light) {
     :root {
-        --light_font: 'Montserrat-Thin';
-        --light_italian_font: 'Montserrat-ThinItalic';
-        --font: 'Montserrat-Light';
-        --italian_font: 'Montserrat-LightItalic';
-        --medium_font: 'Montserrat-Regular';
-        --medium_italian_font: 'Montserrat-RegularItalic';
-        --bold_font: 'Montserrat-SemiBold';
-        --bold_italian_font: 'Montserrat-SemiBoldItalic';
-        --black_font: 'Montserrat-ExtraBold';
-        --black_italian_font: 'Montserrat-ExtraBoldItalic';
-
         --prime_color: #313131;
         --second_color: #4c4c4c;
         --background_color: #fff;

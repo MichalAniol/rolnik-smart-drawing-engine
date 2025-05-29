@@ -2,14 +2,178 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background_color);
-    font-family: var(--light_font);
-    font-size: var(--tab_bar_font_size);
-    line-height: var(--tab_bar_height);
-    color: var(--prime_color);
-    user-select: none;
+    /* user-select: none; */
+    font-family: "Consolas";
+    font-size: 18px;
+    line-height: 18px;
+    color: green;
 }
 
-.test {
-    font-family: var(--font);
-    font-size: 40px;
+.description {
+    font-family: "Consolas";
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.description p {
+    margin: 0 50px 0 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.session {
+    width: 300px;
+    height: 600px;
+    border: 2px solid green;
+    padding: 6px 20px;
+}
+
+.session-title {
+    font-family: "Consolas";
+    font-size: 18px;
+    line-height: 18px;
+    color: green;
+    margin-bottom: 6px;
+}
+
+.session-item {
+    font-family: "Consolas";
+    font-size: 14px;
+    line-height: 14px;
+    color: green;
+}
+
+canvas {
+    border: 2px solid #16256b;
+    padding: 3px
+}
+
+.monitor {
+    margin-left: 24px;
+}
+
+.statistics {
+    margin-left: 24px;
+}
+
+.encourager {}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+ table td:has(label) {
+    /* width: 300px; */
+    padding: 10px 0 6px 0;
+}
+table td label {
+    text-align: center;
+    font-size: 24px;
+    display: block;
+    width: 100%;
+    padding: 10px 0 6px 0;
+    border-top: 1px solid green;
+}
+
+table p {
+    padding: 10px 20px 10px 0;
+    margin: 0;
+    text-align: right;
+    vertical-align: middle;
+    /* border: 2px solid #16256b; */
+    /* margin: 0;
+    position: absolute;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(0%, -50%); */
+
+}
+
+td, tr {
+    margin: 0;
+    padding: 0;
+}
+
+/* na podstawie: https://uiverse.io/suda-code/loud-badger-55 */
+.prime_button {
+    font-size: var(--font_size);
+    font-family: "Consolas";
+    padding: 8px 26px;
+    margin: 5px 10px;
+    border: 1px solid var(--second_color);
+    border-radius: 15px;
+    background-color: var(--second_color);
+    color: var(--background_color);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    cursor: pointer;
+}
+
+.prime_button:hover {
+    background-color: var(--prime_color);
+    box-shadow: 0 0 20px var(--second_color);
+    transform: scale(1.1);
+}
+
+.prime_button:active {
+    background-color: var(--second_color);
+    transition: all 0.15s;
+    -webkit-transition: all 0.15s;
+    box-shadow: none;
+    transform: scale(0.9);
+}
+
+.prime_button:disabled,
+.prime_button[disabled] {
+    font-family: "Consolas";
+    border: 1px solid var(--line_color);
+    background-color: var(--background_color);
+    color: var(--line_color);
+    box-shadow: none;
+    transform: scale(1);
+    cursor: default;
+}
+
+
+
+/* .input na podstawie: https://www.cssportal.com/css-input-generator/ */
+.input {
+    font-size: var(--font_small_size);
+    font-family: "Consolas";
+    text-align: center;
+    padding: 2px 10px;
+    width: 250px;
+    outline: none;
+    background: var(--background_color);
+    color: var(--prime_color);
+    border: 1px solid var(--line_color);
+    border-radius: var(--small_radius);
+    box-shadow: 3px 3px 5px 0px var(--line_color);
+    transition: .3s ease;
+    margin: 0;
+}
+
+.short {
+    width: 70px;
+}
+
+.input:focus {
+    border: 1px solid var(--second_color);
+    background-color: var(--background_color);
+    box-shadow: 3px 3px 10px 0px var(--second_color);
+}
+
+.input::placeholder {
+    color: var(--second_color);
+}
+
+.input:disabled {
+    box-shadow: 3px 3px 10px 0px var(--tab_color);
+    border: 1px solid var(--tab_color);
+    color: var(--line_color);
 }
