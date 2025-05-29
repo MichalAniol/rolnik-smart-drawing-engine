@@ -112,7 +112,7 @@ const dom = (function () {
         off2: 'var(--off_second_color)',
     } as const
 
-    type EventNamesT = 'click' | 'input' | 'did-finish-load' | 'console-message' | 'change' | 'mousedown' | 'mouseup'
+    type EventNamesT = 'click' | 'input' | 'did-finish-load' | 'console-message' | 'change' | 'mousedown' | 'mouseup' | 'touchstart' | 'touchend'
     const add = (elem: HTMLElement | HTMLInputElement | HTMLButtonElement, name: EventNamesT, fn: EventListenerOrEventListenerObject) => elem.addEventListener(name, fn)
 
     const xmlns = 'http://www.w3.org/2000/svg'

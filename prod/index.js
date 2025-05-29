@@ -797,6 +797,8 @@ const simulation = (function () {
             }
         };
         dom.add(runBtn, 'mousedown', run);
+        dom.add(runBtn, 'touchstart', run);
         dom.add(runBtn, 'mouseup', stop);
+        dom.add(runBtn, 'touchend', stop);
     });
 }());

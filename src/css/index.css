@@ -49,7 +49,13 @@ body {
 
 canvas {
     border: 2px solid #16256b;
-    padding: 3px
+    padding: 3px;
+    margin-bottom: 12px;
+}
+
+.canvas-box {
+    display: flex;
+    flex-direction: column;
 }
 
 .monitor {
@@ -112,6 +118,7 @@ td, tr {
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     cursor: pointer;
+    max-width: 300px;
 }
 
 .prime_button:hover {
