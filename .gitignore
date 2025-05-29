@@ -1,4 +1,5 @@
 node_modules
+!prod/favicon.ico
 .env
 .env.dev
 .env.prod
